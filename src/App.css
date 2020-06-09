@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #F5F5F5;
+}
+
+.btn {
+  color: white;
+  border: 1px solid;
+  padding: 2px 4px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn.all {
+  background: orange;
+}
+
+.btn.active {
+  background: red;
+}
+
+.btn.complete {
+  background: green;
+}
+
+.boxer {
+  width: 650px;
+  margin: auto;
+  padding: 25px 10px;
+}
+
+.boxer .box-title {
+  text-align: center;
+  font-size: 25px;
+  color: rgba(175, 47, 47, 0.15);
+}
+
+.boxer .box-body {
+  background: white;
+}
+
+.boxer .box-content {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.boxer .box-content .new-todo {
+  font-size: 24px;
+  padding: 16px 16px 16px 60px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.003);
+}
+
+.boxer .box-content .new-todo::-webkit-input-placeholder {
+  color: #cccccc;
+  font-style: italic;
+}
+
+.boxer .box-content .new-todo:-ms-input-placeholder {
+  color: #cccccc;
+  font-style: italic;
+}
+
+.boxer .box-content .new-todo::-ms-input-placeholder {
+  color: #cccccc;
+  font-style: italic;
+}
+
+.boxer .box-content .new-todo::placeholder {
+  color: #cccccc;
+  font-style: italic;
+}
+
+.boxer .box-content .options {
+  padding: 5px;
+  font-size: 12px;
+}
+
+.boxer .box-content .options li {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 15px;
+}
+
+.boxer .box-content .todo-list {
+  padding: 0px 15px;
+}
+
+.boxer .box-content .todo-list .todo-item {
+  border-bottom: 1px solid #ededed;
+  padding: 15px 0px;
+  list-style: none;
+  font-size: 20px;
+}
+
+.boxer .box-content .todo-list .todo-item.complete {
+  text-decoration: line-through;
+  color: #8080806e;
+}
+
+.boxer .box-footer .line-border {
+  margin: auto;
+  border-bottom: 1px solid #ccc;
+  padding: 2px;
+  background: white;
+}
+
+.boxer .box-footer .line-border.one {
+  width: 98%;
+}
+
+.boxer .box-footer .line-border.two {
+  width: 96%;
+}
+/*# sourceMappingURL=App.css.map */

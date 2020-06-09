@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  body{
+    background: #F5F5F5;
+  }
+  .btn{
+      color: white;
+      border: 1px solid;
+      padding: 2px 4px;
+      border-radius: 2px;
+      cursor: pointer;
+
+      &.all{
+        background: orange;
+      };
+      &.active{
+        background: red;
+      };
+      &.complete{
+        background: green;
+      };
+
+  }
+  .boxer{
+      width: 650px;
+      margin: auto;
+      padding:25px 10px;
+      .box-title{
+          text-align: center;
+          font-size: 25px;
+          color: rgba(175, 47, 47, 0.15);
+      };
+      .box-body{
+          background: white;
+      }
+      .box-content{
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+        .new-todo{
+            font-size: 24px;
+            padding: 16px 16px 16px 60px;
+            border: none;
+            outline: none;
+            background: rgba(0, 0, 0, 0.003);
+        };
+        .new-todo::placeholder{
+            color: #cccccc;
+            font-style: italic;
+        };
+        .options{
+            padding: 5px;
+            font-size: 12px;
+            li{
+                list-style: none;
+                display: inline-flex;
+                margin-right: 15px;
+            }
+        };
+        .todo-list{
+          padding:0px 15px;
+          .todo-item{
+            border-bottom: 1px solid #ededed;
+            padding: 15px 0px;
+            list-style: none;
+            font-size: 20px;
+
+            &.complete{
+              text-decoration: line-through;
+              color: #8080806e;
+            }
+          };
+
+        }
+      };
+      .box-footer{
+          .line-border{
+              margin: auto;
+              border-bottom: 1px solid #ccc;
+              padding: 2px;
+              background: white;
+              &.one{
+                  width: 98%;
+              };
+              &.two{
+                width: 96%;
+              };
+          }
+      }
+
+  }
