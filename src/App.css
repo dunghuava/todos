@@ -101,6 +101,8 @@ body {
   padding: 15px 0px;
   list-style: none;
   font-size: 20px;
+  -webkit-animation: fadeTop 0.4s;
+          animation: fadeTop 0.4s;
 }
 
 .boxer .box-content .todo-list .todo-item.complete {
@@ -121,5 +123,23 @@ body {
 
 .boxer .box-footer .line-border.two {
   width: 96%;
+}
+
+@-webkit-keyframes fadeTop {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeTop {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=App.css.map */

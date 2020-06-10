@@ -67,6 +67,7 @@
             padding: 15px 0px;
             list-style: none;
             font-size: 20px;
+            animation: fadeTop 0.4s;
 
             &.complete{
               text-decoration: line-through;
@@ -91,4 +92,13 @@
           }
       }
 
+  }
+
+  @keyframes fadeTop{
+    0%{
+      opacity: 0.2;
+    }
+    100%{
+      opacity: 1;
+    }
   }

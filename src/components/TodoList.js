@@ -10,7 +10,14 @@ class TodoList extends Component {
             <ul className="todo-list">
                 {                    
                     this.props.todos.map((item,key)=>
-                        <TodoItem id={key} key={key} title={item.title} complete={item.complete} />
+                        <TodoItem 
+                            id={key} 
+                            key={key} 
+                            title={item.title} 
+                            complete={item.complete} 
+                            onChangeCkb={this.props.onChangeCkb} 
+                            onClickBtn={this.props.onClickBtn}
+                        />
                     )
                 }
             </ul>

@@ -5,25 +5,45 @@ class Boxer extends Component {
     constructor(props){
         super(props);
         this.onAddToDoItem = this.onAddToDoItem.bind(this);
+        this.mfilter=this.mfilter.bind(this);
         this.state={
-            todos:[
-                    {'title':'Hello','complete':true},
-                    {'title':'Xin chào','complete':false},
-                    {'title':'Welcome','complete':true}
-            ]
+            todos:[],
+            filter:0
         }
     }
     onAddToDoItem(e){
-        var val = e.target.value;
-        var keyCode = e.keyCode;
+        let val = e.target.value;
+        let keyCode = e.keyCode;
         if (keyCode==13 && val.length>0){
             e.target.value=null;
-            const items = [...this.state.todos];
-            items.push({
+            const todos = [...this.state.todos];
+            todos.push({
                 'title':val,'complete':false
             })
-           this.setState({todos:items});
+           this.setState({todos:todos});
         }
+    }
+    onChangeCkb = (event) =>{
+        let index= event.target.attributes.getNamedItem('data-id').value;
+        let todos= [...this.state.todos];
+        todos[index].complete=!todos[index].complete;
+        this.setState({todos:todos});
+    }
+    onClickBtn = (event)=>{
+        let index= event.target.attributes.getNamedItem('data-id').value;
+        let todos = [...this.state.todos];
+        todos.splice(index,1);
+        this.setState({
+            todos:todos,
+        })
+    }
+    mfilter(c){
+        this.setState({
+            filter:c
+        });
+    }
+    componentWillUpdate(){
+        console.log('updated');
     }
     render() {
         return (
@@ -35,14 +55,18 @@ class Boxer extends Component {
                     <div className="box-content">
                         <input onKeyDown={this.onAddToDoItem} className="new-todo" type="text" placeholder="What need to be done..."/>
                         <div className="todo-list-wp">
-                            <TodoList todos={this.state.todos}/>
+                            <TodoList
+                                onClickBtn={this.onClickBtn} 
+                                onChangeCkb={this.onChangeCkb} 
+                                todos={this.state.todos}
+                            />
                         </div>
                         <div className="options">
                             <ul>
                                 <li>{this.state.todos.length} item left</li>
-                                <li className="btn all">All</li>
-                                <li className="btn active">Active</li>
-                                <li className="btn complete">Complete</li>
+                                <li onClick={()=>this.mfilter(0)} className="btn all">All</li>
+                                <li onClick={()=>this.mfilter(1)} className="btn active">Active</li>
+                                <li onClick={()=>this.mfilter(2)} className="btn complete">Complete</li>
                             </ul>
                         </div>
                     </div>
